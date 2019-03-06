@@ -47,15 +47,15 @@ public class MainActivity extends AppCompatActivity {
 
 //This is essentially task one
 //    Retrieve the joke from the java library created and show in the toast
-
-    public void tellJoke(View view)
-    {
-        MyClass mine = new MyClass();
-        String joke = mine.returnJoke();
-        Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
-
-
-    }
+//
+//    public void tellJoke(View view)
+//    {
+//        MyClass mine = new MyClass();
+//        String joke = mine.returnJoke();
+//        Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
+//
+//
+//    }
 
 
 }

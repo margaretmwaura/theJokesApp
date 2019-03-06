@@ -30,7 +30,8 @@ public class EndpointsAsyncTask extends AsyncTask<Context, Void, String>
         @Override
         protected String doInBackground(Context... pairs)
         {
-            if(myApiService == null) {  // Only do this once
+            if(myApiService == null)
+            {  // Only do this once
                 MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(),
                         new AndroidJsonFactory(), null)
                         // options for running against local devappserver
@@ -51,9 +52,11 @@ public class EndpointsAsyncTask extends AsyncTask<Context, Void, String>
 
             context = pairs[0];
 
-            try {
+            try
+            {
                 return myApiService.sayHi("TheJoke").execute().getData();
-            } catch (IOException e)
+            }
+            catch (IOException e)
             {
                 Log.d("TheResultingError " , "This is the error" + e.getMessage());
                 return e.getMessage();
