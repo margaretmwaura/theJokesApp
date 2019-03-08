@@ -13,7 +13,7 @@ buildscript {
 android {
     compileSdkVersion 28
     buildToolsVersion "28.0.3"
-//    flavorDimensions "versionCode"
+
 
     defaultConfig {
         applicationId "com.udacity.gradle.builditbigger"
@@ -58,12 +58,14 @@ android {
 dependencies
         {
 //            I had to add this dependency to avoid the error in the manifest regarding the google play services version
-    implementation 'com.google.android.gms:play-services:4.0.30'
+//    implementation 'com.google.android.gms:play-services:4.0.30'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     endpointsServer project(path: ':backend', configuration: 'endpoints')
     implementation 'com.android.support:appcompat-v7:26.1.0'
 //    implementation 'com.google.android.gms:play-services-ads:11.8.0'
+
+//            The below dependency is needed for the ads service in the free version
     freeImplementation 'com.google.android.gms:play-services-ads:11.8.0'
     implementation 'com.google.api-client:google-api-client:1.23.0'
     implementation 'com.google.http-client:google-http-client-android:1.23.0'
